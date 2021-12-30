@@ -1,0 +1,18 @@
+@import url(./module/asset.css);
+
+body {
+  background-color: var(--primary-color) !important;
+}
+
+form{
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+form img{
+  border-radius: 100%;
+}
+form button{
+  background-color: var(--primary-color) !important;
+}

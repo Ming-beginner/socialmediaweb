@@ -1,0 +1,141 @@
+@import url(./module/asset.css);
+
+body {
+  color: var(--font-color);
+  background-color: var(--light-background) !important;
+  transition: linear 0.3s;
+}
+.body-darkmode {
+  background-color: var(--dark-background) !important;
+
+}
+.body-darkmode h1, .body-darkmode h2, .body-darkmode p{
+  color: var(--white-color);
+}
+.body-darkmode form{
+  background-color: var(--dark-primary-color);
+}
+form{
+  width: 40%;
+  transition: linear 0.3s;
+  background-color: var(--light-primary-color);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+form img{
+  border-radius: 100%;
+}
+form button{
+  background-color: var(--blue-color) !important;
+}
+
+.password-input i{
+  font-size: 12px;
+  color: red;
+
+}
+.email-input i {
+  font-size: 12px;
+  color: red;
+}
+
+/*Turn on and off darkmode*/
+.turn-on-darkmode{
+  transition: linear 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--light-primary-color);
+  position: absolute;
+  top: 60px;
+  right: 1px;
+}
+.turn-on-darkmode p{
+  font-weight: 600;
+}
+.body-darkmode .turn-on-darkmode {
+  background-color: var(--dark-primary-color);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-background);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(29px);
+  -ms-transform: translateX(29px);
+  transform: translateX(29px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+@media (max-width: 1023px) and (min-width: 724px) {
+  form{
+    width: 60%;
+  }
+}
+
+@media (max-width: 723px) {
+  .turn-on-darkmode{
+    top: 0px;
+    padding: 14px;
+  }
+  .turn-on-darkmode p{
+    font-size: 12px;
+  }
+  form{
+    width: 80%;
+  }
+}

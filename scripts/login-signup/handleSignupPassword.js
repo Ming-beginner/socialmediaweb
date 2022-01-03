@@ -1,20 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+import { firebaseConfig } from "../config/firebaseConfig.js";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyD_csb12NMusiY36GiELVTjCJm1XKp4nBs",
-  authDomain: "authentication-practice-c5a1f.firebaseapp.com",
-  projectId: "authentication-practice-c5a1f",
-  storageBucket: "authentication-practice-c5a1f.appspot.com",
-  messagingSenderId: "276023611911",
-  appId: "1:276023611911:web:20da52981c3dc588b9d0a2",
-  measurementId: "G-6HYZHP2W3S"
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth();
 
 let passwordInput = document.querySelector(".password-input>input[type=password]");

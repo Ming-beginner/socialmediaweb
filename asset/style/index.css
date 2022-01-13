@@ -1,8 +1,14 @@
 @import url("./module/navbar.css");
 @import url("./module/navbarResponsive.css");
+@import url("./module/post.css");
 
-
-body{
-    background: var(--light-background);
+body {
+  background: var(--light-background);
 }
 
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
